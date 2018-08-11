@@ -10,8 +10,6 @@
 
 我的telegram帳號：https://t.me/Tang_H
 
-telegram群組：https://t.me/shanghanlun
-
 ***
 
 ## 一，校订目標：
