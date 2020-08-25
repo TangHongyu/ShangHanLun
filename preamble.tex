@@ -32,7 +32,7 @@
 
 \usepackage{xeCJK}
 	\xeCJKsetup{
-		PunctStyle=kaiming
+		PunctStyle = kaiming
 	}
 	\setCJKmainfont[Path=ttf/]{TH-Sung-TP0}
 	\setCJKsansfont[Path=ttf/]{TH-Sung-TP0}
@@ -56,8 +56,16 @@
 
 \usepackage{xcolor}
 
+\usepackage{tocloft}
+	\cftbeforesecskip 0.5ex
+	\cftbeforechapskip 0.5ex
+	\cftbeforepartskip 1ex
+	\cftsecindent 4em
+	\cftchapindent 2em
+	\cftpartindent0em
+
 %\nofiles
-\pagestyle{plain}
+\pagestyle{headings}
 %\punctstyle{kaiming}
 \CJKsetecglue{}%完全禁用汉字与其他内容间的空格
 %\raggedright
