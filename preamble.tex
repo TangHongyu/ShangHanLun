@@ -1,0 +1,75 @@
+
+% Encoding: UTF-8
+
+%“em”是相對长度單位，相当於所用字体中大寫“M”的寬度。
+%“ex”是相對长度單位，相当於所用字体中小寫“x”的高度，此高度通常为字体尺寸的一半。
+
+\documentclass[b5paper,twoside,zihao=-4,UTF8]{ctexbook}
+
+\usepackage{ctex}
+	\ctexset{
+		section = {
+			format+ = \zihao{-4} \heiti \raggedright,
+			name = {,.},
+			number = \arabic{section},
+			beforeskip = 1.0ex plus 0.2ex minus .2ex,
+			afterskip = 1.0ex plus 0.2ex minus .2ex,
+			aftername = \hspace{0pt}
+		},
+		chapter = {
+			format+ = \zihao{-3} \heiti,
+			name = {,.},
+			number = \chinese{chapter},
+			beforeskip = 1.0ex plus 0.2ex minus .2ex,
+			afterskip = 1.0ex plus 0.2ex minus .2ex,
+			aftername = \hspace{0pt}
+		}
+	}
+
+\usepackage{xeCJK}
+	\xeCJKsetup{
+		PunctStyle=kaiming
+	}
+	\setCJKmainfont[Path=ttf/]{TH-Sung-TP0}
+	\setCJKsansfont[Path=ttf/]{TH-Sung-TP0}
+	\setCJKmonofont[Path=ttf/]{TH-Sung-TP0}
+%	\setCJKmainfont{SimSun}%设置正文罗马族的 CJK 字体
+%	\setCJKsansfont{SimSun}%设置正文无衬线族的 CJK 字体
+%	\setCJKmonofont{SimSun}%设置正文等宽族的 CJK 字体
+
+\usepackage{fontspec}
+%	\setmainfont{SimSun}
+%	\setmainfont[Path=ttf/]{TH-Sy-P0}
+%	\setsansfont{SimSun}
+
+\usepackage{geometry}%頁面尺寸
+	\geometry{left=2.5cm,right=2.5cm,top=2cm,bottom=2cm}
+
+\usepackage[stable]{footmisc}
+
+\usepackage{graphicx}
+\graphicspath{{pics/}}
+
+\newcommand\jing{\hbox{\scalebox{0.6}[1]{纟}\kern-0.3em\scalebox{0.7}[1]{巠}}}%經
+\newcommand\qing{\hbox{\scalebox{0.5}[1]{车}\kern-0.15em\scalebox{0.65}[1]{巠}}}%輕
+\newcommand\xu{\hbox{\scalebox{0.6}[1]{纟}\kern-0.3em\scalebox{0.7}[1]{賣}}}%續
+\newcommand\rao{\hbox{\scalebox{0.6}[1]{纟}\kern-0.3em\scalebox{0.7}[1]{堯}}}%繞
+
+\pagestyle{plain}
+%\punctstyle{kaiming}
+\CJKsetecglue{}%完全禁用汉字与其他内容间的空格
+%\raggedright
+\setlength{\parindent}{0em}%段落中第一行缩进量
+\setlength{\parskip}{3ex}%段落间距
+%\nofiles
+
+\title{傷寒雜病論}
+
+\author{
+	张仲景著述\\王叔和撰次\\唐弘宇校訂
+\and
+	毛{\hfill}敏\\彭{\hfill}健\\楊漢鑫\\枼建橋\\鄭{\hfill}浩\\張麟玉\\趙任傑
+}
+
+\date{\today}
+
