@@ -1,28 +1,32 @@
 
+% preamble.tex
 % Encoding: UTF-8
 
 %“em”是相對长度單位，相当於所用字体中大寫“M”的寬度。
 %“ex”是相對长度單位，相当於所用字体中小寫“x”的高度，此高度通常为字体尺寸的一半。
 
-\documentclass[b5paper,twoside,zihao=-4,UTF8]{ctexbook}
+\documentclass[b5paper,twoside,zihao=-4,notitlepage,openany,UTF8]{ctexbook}
+
+\usepackage{syntonly}
+%	\syntaxonly%編譯時只檢查語法，不輸出PDF。
 
 \usepackage{ctex}
 	\ctexset{
 		section = {
-			format+ = \zihao{-4} \heiti \raggedright,
+			format += \zihao{-4} \heiti \raggedright,
 			name = {,.},
 			number = \arabic{section},
 			beforeskip = 1.0ex plus 0.2ex minus .2ex,
 			afterskip = 1.0ex plus 0.2ex minus .2ex,
-			aftername = \hspace{0pt}
+			aftername = \hspace{0.1em}
 		},
 		chapter = {
-			format+ = \zihao{-3} \heiti,
+			format += \zihao{-3} \heiti,
 			name = {,.},
 			number = \chinese{chapter},
 			beforeskip = 1.0ex plus 0.2ex minus .2ex,
 			afterskip = 1.0ex plus 0.2ex minus .2ex,
-			aftername = \hspace{0pt}
+			aftername = \hspace{0.1em}
 		}
 	}
 
@@ -42,34 +46,32 @@
 %	\setmainfont[Path=ttf/]{TH-Sy-P0}
 %	\setsansfont{SimSun}
 
-\usepackage{geometry}%頁面尺寸
+\usepackage{geometry}
 	\geometry{left=2.5cm,right=2.5cm,top=2cm,bottom=2cm}
 
 \usepackage[stable]{footmisc}
 
 \usepackage{graphicx}
-\graphicspath{{pics/}}
+	\graphicspath{{pics/}}
 
-\newcommand\jing{\hbox{\scalebox{0.6}[1]{纟}\kern-0.3em\scalebox{0.7}[1]{巠}}}%經
-\newcommand\qing{\hbox{\scalebox{0.5}[1]{车}\kern-0.15em\scalebox{0.65}[1]{巠}}}%輕
-\newcommand\xu{\hbox{\scalebox{0.6}[1]{纟}\kern-0.3em\scalebox{0.7}[1]{賣}}}%續
-\newcommand\rao{\hbox{\scalebox{0.6}[1]{纟}\kern-0.3em\scalebox{0.7}[1]{堯}}}%繞
+\usepackage{xcolor}
 
+%\nofiles
 \pagestyle{plain}
 %\punctstyle{kaiming}
 \CJKsetecglue{}%完全禁用汉字与其他内容间的空格
 %\raggedright
 \setlength{\parindent}{0em}%段落中第一行缩进量
 \setlength{\parskip}{3ex}%段落间距
-%\nofiles
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
 
 \title{傷寒雜病論}
-
 \author{
 	张仲景著述\\王叔和撰次\\唐弘宇校訂
 \and
 	毛{\hfill}敏\\彭{\hfill}健\\楊漢鑫\\枼建橋\\鄭{\hfill}浩\\張麟玉\\趙任傑
 }
-
 \date{\today}
 
+\endinput
